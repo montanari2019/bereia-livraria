@@ -4,7 +4,8 @@ import {
   Poppins_400Regular,
   Poppins_700Bold,
 } from "@expo-google-fonts/poppins";
-import { Loading } from "../components/loading/loading";
+import { Loading } from "../components/loading/Loading";
+import Login from "../screens/LoginScreen/LoginScreen";
 
 export default function Index() {
   const [fontsLoaded] = useFonts({
@@ -12,20 +13,5 @@ export default function Index() {
     Poppins_700Bold,
   });
 
-  return (
-    <>
-      <StatusBar
-        backgroundColor="transparent"
-        barStyle={"dark-content"}
-        translucent={true}
-      />
-      {fontsLoaded ? (
-        <View>
-          <Text>Não tem nada a exibir ainda</Text>
-        </View>
-      ) : (
-        <Loading textFild />
-      )}
-    </>
-  );
+  return <>{fontsLoaded ? <Login /> : <Loading textFild />}</>;
 }
