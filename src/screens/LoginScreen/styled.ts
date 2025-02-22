@@ -51,4 +51,47 @@ export const styled = StyleSheet.create({
     textAlign: "center",
     fontFamily: THEME.FONT_FAMILY.FONT_POPPINS_400,
   },
+
+  buttonDisplay: {
+    flex: 1,
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: THEME.SIZES.SIZE_MD_20,
+    marginHorizontal: THEME.SIZES.SIZE_LG_24,
+  },
+  textButton: {
+    fontSize: THEME.SIZES.SIZE_XS_16,
+    fontFamily: THEME.FONT_FAMILY.FONT_POPPINS_400,
+    fontWeight: "bold",
+    color: THEME.COLORS.WHITE,
+  },
+  buttonLogin: {
+    backgroundColor: THEME.COLORS.BEREIA_YELLOW,
+    borderRadius: 10,
+    width: "100%",
+    height: 50,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+
+  buttonCreatAcount: {
+    backgroundColor: THEME.COLORS.BEREIA_BRONW,
+    borderRadius: 10,
+    width: "100%",
+    height: 50,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+
+  containerFooter: {
+    alignItems: "center",
+    marginBottom: THEME.SIZES.SIZE_SM_18,
+  },
+
+  textFooter: {
+    fontSize: THEME.SIZES.SIZE_XXXS_12,
+    color: THEME.COLORS.GRAY_200,
+    fontFamily: THEME.FONT_FAMILY.FONT_POPPINS_400,
+  },
 });

@@ -5,7 +5,8 @@ import {
   Poppins_700Bold,
 } from "@expo-google-fonts/poppins";
 import { Loading } from "../components/loading/Loading";
-import Login from "../screens/LoginScreen/LoginScreen";
+import LoginHome from "../screens/LoginScreen/LoginScreen";
+import { Routes } from "../routes";
 
 export default function Index() {
   const [fontsLoaded] = useFonts({
@@ -13,5 +14,5 @@ export default function Index() {
     Poppins_700Bold,
   });
 
-  return <>{fontsLoaded ? <Login /> : <Loading textFild />}</>;
+  return <>{fontsLoaded ? <Routes /> : <Loading textFild />}</>;
 }

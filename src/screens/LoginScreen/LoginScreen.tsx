@@ -1,10 +1,21 @@
-import { Image, StatusBar, Text, View } from "react-native";
-import { styled } from "./styled";
-import LupaImage from "../../assets/images/lupa.png";
-import LogoBereia from "../../assets/images/logo_tela_login.png";
+import { HeaderPublic } from "@/src/components/headerPublic/HeaderPublic";
+import { StackRoutesNavigatorPublicProps } from "@/src/routes/stackRoutes/@types";
 import { THEME } from "@/src/theme/global";
+import { useNavigation } from "@react-navigation/native";
+import { StatusBar, Text, TouchableOpacity, View } from "react-native";
+import { styled } from "./styled";
 
-export default function Login() {
+export default function LoginHome() {
+  const navigator = useNavigation<StackRoutesNavigatorPublicProps>();
+
+  function handleNavigateSingUp() {
+    navigator.navigate("signUp");
+  }
+
+  function handleNavigateSingIn() {
+    navigator.navigate("signIn");
+  }
+
   return (
     <>
       <StatusBar
@@ -13,17 +24,28 @@ export default function Login() {
         translucent={true}
       />
       <View style={styled.container}>
-        <View style={styled.containerHeader}>
-          <View style={styled.lupaContent}>
-            <Image source={LupaImage} style={styled.imagemLupa} />
-          </View>
+        <HeaderPublic />
 
-          <View style={styled.displayContainer}>
-            <Image source={LogoBereia} style={styled.imagemLogo} />
-            <Text style={styled.textLogo}>
-              Onde cada página abre um novo mundo.
-            </Text>
-          </View>
+        <View style={styled.buttonDisplay}>
+          <TouchableOpacity
+            style={styled.buttonLogin}
+            onPress={handleNavigateSingIn}
+          >
+            <Text style={styled.textButton}>Login</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            style={styled.buttonCreatAcount}
+            onPress={handleNavigateSingUp}
+          >
+            <Text style={styled.textButton}>Criar Conta</Text>
+          </TouchableOpacity>
+        </View>
+
+        <View style={styled.containerFooter}>
+          <Text style={styled.textFooter}>
+            © 2025 - Developement by Montanari Soft.
+          </Text>
         </View>
       </View>
     </>

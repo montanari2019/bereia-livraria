@@ -28,11 +28,6 @@ export const THEME = {
     SIZE_TINY_10: 10,
   },
 
-  TYPOGRAPHY: {
-    FONT_REGULAR: 400,
-    FONT_BOLD: 700,
-  },
-
   FONT_FAMILY: {
     FONT_POPPINS_400: "Poppins_400Regular",
     FONT_POPPINS_700: "Poppins_700Bold",
