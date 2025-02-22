@@ -2,7 +2,7 @@ import { HeaderPublic } from "@/src/components/headerPublic/HeaderPublic";
 import { InputComponent } from "@/src/components/inputComponent/inputComponents";
 import { StackRoutesNavigatorPublicProps } from "@/src/routes/stackRoutes/@types";
 import { useNavigation } from "@react-navigation/native";
-import { Text, View } from "react-native";
+import { Text, TouchableOpacity, View } from "react-native";
 import { styled } from "./styled";
 import { ScrollView } from "react-native";
 import { Controller, useForm } from "react-hook-form";
@@ -70,6 +70,16 @@ export default function SingIn() {
               />
             )}
           />
+          <TouchableOpacity style={styled.buttonForgoutPassword}>
+            <Text style={styled.textForgoutPassword}>Esqueceu sua senha ?</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            style={styled.buttonLogin}
+            // onPress={handleNavigateSingIn}
+          >
+            <Text style={styled.textButton}>Login</Text>
+          </TouchableOpacity>
         </View>
       </View>
     </ScrollView>

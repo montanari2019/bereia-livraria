@@ -62,8 +62,7 @@ export const styled = StyleSheet.create({
   },
   textButton: {
     fontSize: THEME.SIZES.SIZE_XS_16,
-    fontFamily: THEME.FONT_FAMILY.FONT_POPPINS_400,
-    fontWeight: "bold",
+    fontFamily: THEME.FONT_FAMILY.FONT_POPPINS_700,
     color: THEME.COLORS.WHITE,
   },
   buttonLogin: {
