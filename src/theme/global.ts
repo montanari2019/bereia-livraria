@@ -20,6 +20,7 @@ export const THEME = {
 
   SIZES: {
     SIZE_LG_24: 24,
+    SIZE_MARGIN_HORIZONTA_24: 24,
     SIZE_MD_20: 20,
     SIZE_SM_18: 18,
     SIZE_XS_16: 16,
