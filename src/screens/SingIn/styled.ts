@@ -5,6 +5,7 @@ export const styled = StyleSheet.create({
   container: {
     backgroundColor: THEME.COLORS.WHITE,
     flex: 1,
+    // paddingBottom: THEME.SIZES.SIZE_XXXS_12,
   },
 
   formsContainer: {
@@ -32,9 +33,9 @@ export const styled = StyleSheet.create({
   },
   buttonLogin: {
     backgroundColor: THEME.COLORS.BEREIA_YELLOW,
-    borderRadius: 10,
+    borderRadius: THEME.SIZES.SIZE_RADIUS_15,
+    height: THEME.SIZES.SIZE_HEIGHT_50,
     width: "100%",
-    height: 50,
     justifyContent: "center",
     alignItems: "center",
   },

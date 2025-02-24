@@ -4,6 +4,7 @@ import { THEME } from "@/src/theme/global";
 import { useNavigation } from "@react-navigation/native";
 import { StatusBar, Text, TouchableOpacity, View } from "react-native";
 import { styled } from "./styled";
+import { Footer } from "@/src/components/footer/footer";
 
 export default function LoginHome() {
   const navigator = useNavigation<StackRoutesNavigatorPublicProps>();
@@ -42,11 +43,7 @@ export default function LoginHome() {
           </TouchableOpacity>
         </View>
 
-        <View style={styled.containerFooter}>
-          <Text style={styled.textFooter}>
-            © 2025 - Developement by Montanari Soft.
-          </Text>
-        </View>
+        <Footer />
       </View>
     </>
   );

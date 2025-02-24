@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 
 export const styled = StyleSheet.create({
   containerHeader: {
-    height: 450,
+    height: 400,
     borderBottomLeftRadius: 50,
     borderBottomRightRadius: 50,
     width: "100%",

@@ -26,6 +26,8 @@ export const THEME = {
     SIZE_XSS_14: 14,
     SIZE_XXXS_12: 12,
     SIZE_TINY_10: 10,
+    SIZE_RADIUS_15: 15,
+    SIZE_HEIGHT_50: 50,
   },
 
   FONT_FAMILY: {

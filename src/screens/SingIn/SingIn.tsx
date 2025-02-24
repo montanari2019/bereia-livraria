@@ -9,6 +9,7 @@ import { Controller, useForm } from "react-hook-form";
 import { CreateLoginSchema, LoginFormData } from "./models/loginShema.mode";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { PanGestureHandlerGoBack } from "@/src/components/panGestureHandleGoBack/panGestureHandleGoBack";
+import { Footer } from "@/src/components/footer/footer";
 
 export default function SingIn() {
   const navigator = useNavigation<StackRoutesNavigatorPublicProps>();
@@ -38,7 +39,7 @@ export default function SingIn() {
   }
   return (
     <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
-      <PanGestureHandlerGoBack>
+      <PanGestureHandlerGoBack route="loginHome">
         <View style={styled.container}>
           <HeaderPublic />
 
@@ -92,6 +93,7 @@ export default function SingIn() {
               <Text style={styled.textButton}>Login</Text>
             </TouchableOpacity>
           </View>
+          <Footer />
         </View>
       </PanGestureHandlerGoBack>
     </ScrollView>
