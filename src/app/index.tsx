@@ -1,11 +1,10 @@
-import { StatusBar, Text, View } from "react-native";
 import {
-  useFonts,
   Poppins_400Regular,
   Poppins_700Bold,
+  useFonts,
 } from "@expo-google-fonts/poppins";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { Loading } from "../components/loading/Loading";
-import LoginHome from "../screens/LoginScreen/LoginScreen";
 import { Routes } from "../routes";
 
 export default function Index() {
@@ -14,5 +13,11 @@ export default function Index() {
     Poppins_700Bold,
   });
 
-  return <>{fontsLoaded ? <Routes /> : <Loading textFild />}</>;
+  return (
+    <>
+      <GestureHandlerRootView style={{ flex: 1 }}>
+        {fontsLoaded ? <Routes /> : <Loading textFild />}
+      </GestureHandlerRootView>
+    </>
+  );
 }
