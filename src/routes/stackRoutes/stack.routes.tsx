@@ -1,9 +1,10 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { StackRoutesTypeProps } from "./@types";
-import SignIn from "../../screens/SingIn/SingIn";
-import SignUp from "../../screens/SingUp/SingUp";
-import LoginHome from "@/src/screens/LoginScreen/LoginScreen";
-import ForgotPassword from "@/src/screens/ForgotPassword/ForgotPassword";
+
+import LoginHome from "@/src/screens/public/LoginScreen/LoginScreen";
+import SignIn from "@/src/screens/public/SingIn/SingIn";
+import SignUp from "@/src/screens/public/SingUp/SingUp";
+import ForgotPassword from "@/src/screens/public/ForgotPassword/ForgotPassword";
 
 const { Navigator, Screen } =
   createNativeStackNavigator<StackRoutesTypeProps>();

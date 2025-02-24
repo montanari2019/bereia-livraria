@@ -1,15 +1,13 @@
-import { FormsSingUp } from "@/src/components/formsSingUp/formSingUp";
 import { PanGestureHandlerGoBack } from "@/src/components/panGestureHandleGoBack/panGestureHandleGoBack";
-import { StackRoutesNavigatorPublicProps } from "@/src/routes/stackRoutes/@types";
-import { useNavigation } from "expo-router";
+import { ROUTES_STACK_ENUM } from "@/src/routes/routes.enum";
 import { Image, Text, View } from "react-native";
-import ImageLupa from "../../assets/images/lupa.png";
+import ImageLupa from "../../../assets/images/lupa.png";
 import { styled } from "./styled";
+import { FormsSingUp } from "@/src/components/formsSingUp/formSingUp";
 
 export default function SingUp() {
-  const navigator = useNavigation<StackRoutesNavigatorPublicProps>();
   return (
-    <PanGestureHandlerGoBack route="loginHome">
+    <PanGestureHandlerGoBack route={ROUTES_STACK_ENUM.LOGIN_HOME_PUBLIC}>
       <View style={styled.container}>
         <View style={styled.containerHeader}>
           <View style={styled.lupaContent}>

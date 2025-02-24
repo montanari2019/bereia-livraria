@@ -10,6 +10,7 @@ import { CreateLoginSchema, LoginFormData } from "./models/loginShema.mode";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { PanGestureHandlerGoBack } from "@/src/components/panGestureHandleGoBack/panGestureHandleGoBack";
 import { Footer } from "@/src/components/footer/footer";
+import { ROUTES_STACK_ENUM } from "@/src/routes/routes.enum";
 
 export default function SingIn() {
   const navigator = useNavigation<StackRoutesNavigatorPublicProps>();
@@ -39,7 +40,7 @@ export default function SingIn() {
   }
   return (
     <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
-      <PanGestureHandlerGoBack route="loginHome">
+      <PanGestureHandlerGoBack route={ROUTES_STACK_ENUM.LOGIN_HOME_PUBLIC}>
         <View style={styled.container}>
           <HeaderPublic />
 

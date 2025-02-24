@@ -1,7 +1,7 @@
-import { StackRoutesTypeProps } from "@/src/routes/stackRoutes/@types";
+import { ROUTES_STACK_ENUM } from "@/src/routes/routes.enum";
 import { ReactNode } from "react";
 
 export interface PanGestureGoBackProps {
   children: ReactNode;
-  route: keyof StackRoutesTypeProps;
+  route: ROUTES_STACK_ENUM;
 }

@@ -5,13 +5,12 @@ import {
   PanGestureHandlerGestureEvent,
 } from "react-native-gesture-handler";
 import { PanGestureGoBackProps } from "./interface/interface";
-import { StackRoutesNavigatorPublicProps } from "@/src/routes/stackRoutes/@types";
 
 export function PanGestureHandlerGoBack({
   children,
   route,
 }: PanGestureGoBackProps) {
-  const navigator = useNavigation<StackRoutesNavigatorPublicProps>();
+  const navigator = useNavigation<any>();
 
   function onSwipe(event: PanGestureHandlerGestureEvent) {
     // Detecta o arrasto para a direita (X positivo)

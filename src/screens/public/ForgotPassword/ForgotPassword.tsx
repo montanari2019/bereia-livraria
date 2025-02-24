@@ -12,6 +12,7 @@ import { StackRoutesNavigatorPublicProps } from "@/src/routes/stackRoutes/@types
 import { Controller, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { ForgotFormData, ForgotSchema } from "./models/forgotSchema.model";
+import { ROUTES_STACK_ENUM } from "@/src/routes/routes.enum";
 
 export default function ForgotPassword() {
   const navigator = useNavigation<StackRoutesNavigatorPublicProps>();
@@ -50,7 +51,7 @@ export default function ForgotPassword() {
 
   return (
     <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
-      <PanGestureHandlerGoBack route="signIn">
+      <PanGestureHandlerGoBack route={ROUTES_STACK_ENUM.SIGN_IN_PUBLIC}>
         <View style={styled.container}>
           <HeaderPublic />
 

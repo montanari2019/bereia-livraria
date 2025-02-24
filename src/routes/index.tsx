@@ -2,6 +2,7 @@ import { DefaultTheme, NavigationContainer } from "@react-navigation/native";
 import { THEME } from "../theme/global";
 import { View } from "react-native";
 import StackRoute from "./stackRoutes/stack.routes";
+import BottomTabNavigationRoute from "./bottomTabsRoutes/bottomTabs.route";
 
 export function Routes() {
   const theme = DefaultTheme;
@@ -9,9 +10,8 @@ export function Routes() {
 
   return (
     <View style={{ flex: 1, backgroundColor: THEME.COLORS.WHITE }}>
-      {/* {user.token  ? <AppRoutes/>: <AuthRoutes />} */}
-
-      <StackRoute />
+      {/* <StackRoute /> */}
+      <BottomTabNavigationRoute />
     </View>
   );
 }
