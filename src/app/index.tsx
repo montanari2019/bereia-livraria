@@ -1,10 +1,11 @@
-import { StatusBar, Text, View } from "react-native";
 import {
-  useFonts,
   Poppins_400Regular,
   Poppins_700Bold,
+  useFonts,
 } from "@expo-google-fonts/poppins";
-import { Loading } from "../components/loading/loading";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
+import { Loading } from "../components/loading/Loading";
+import { Routes } from "../routes";
 
 export default function Index() {
   const [fontsLoaded] = useFonts({
@@ -14,18 +15,9 @@ export default function Index() {
 
   return (
     <>
-      <StatusBar
-        backgroundColor="transparent"
-        barStyle={"dark-content"}
-        translucent={true}
-      />
-      {fontsLoaded ? (
-        <View>
-          <Text>Não tem nada a exibir ainda</Text>
-        </View>
-      ) : (
-        <Loading textFild />
-      )}
+      <GestureHandlerRootView style={{ flex: 1 }}>
+        {fontsLoaded ? <Routes /> : <Loading textFild />}
+      </GestureHandlerRootView>
     </>
   );
 }

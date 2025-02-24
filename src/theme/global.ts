@@ -19,17 +19,20 @@ export const THEME = {
   },
 
   SIZES: {
-    SIZE_LG: 24,
-    SIZE_MD: 20,
-    SIZE_SM: 18,
-    SIZE_XS: 16,
-    SIZE_XSS: 14,
-    SIZE_XXXS: 12,
-    SIZE_TINY: 10,
+    SIZE_LG_24: 24,
+    SIZE_MARGIN_HORIZONTA_24: 24,
+    SIZE_MD_20: 20,
+    SIZE_SM_18: 18,
+    SIZE_XS_16: 16,
+    SIZE_XSS_14: 14,
+    SIZE_XXXS_12: 12,
+    SIZE_TINY_10: 10,
+    SIZE_RADIUS_15: 15,
+    SIZE_HEIGHT_50: 50,
   },
 
-  TYPOGRAPHY: {
-    FONT_REGULAR: 400,
-    FONT_BOLD: 700,
+  FONT_FAMILY: {
+    FONT_POPPINS_400: "Poppins_400Regular",
+    FONT_POPPINS_700: "Poppins_700Bold",
   },
 };
