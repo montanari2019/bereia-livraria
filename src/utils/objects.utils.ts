@@ -229,13 +229,10 @@ Por conta disso, Alina é enviada ao Palácio para ser treinada como parte de um
   },
 ];
 
-export const livrosMap = livrosProd.reduce(
-  (map, { id, ...resto }: PropsLivros) => {
-    map.set(id, resto);
-    return map;
-  },
-  new Map<string, Omit<PropsLivros, "id">>()
-);
+export const livrosMap = livrosProd.reduce((map, livro) => {
+  map.set(livro.id, livro);
+  return map;
+}, new Map());
 
 export const categoriasComUrl = Object.keys(
   livrosProd.reduce<{ [key: string]: string }>((acc, livro) => {

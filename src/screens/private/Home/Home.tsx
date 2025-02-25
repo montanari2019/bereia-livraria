@@ -1,22 +1,13 @@
-import { HomeStackRoutesNavigatorPrivateProps } from "@/src/routes/privateStackRoutes/homeStackRoutes/@types";
-import { useNavigation } from "@react-navigation/native";
-import {
-  FlatList,
-  Image,
-  Text,
-  TextInput,
-  TouchableOpacity,
-  View,
-} from "react-native";
-import AntDesign from "@expo/vector-icons/AntDesign";
-import { styled } from "./styled";
-import { THEME } from "@/src/theme/global";
-import { InputSearch } from "@/src/components/inputSearch/inputSearch";
-import { Separator } from "@/src/components/separator/separator";
-import { ParagraphTitle } from "@/src/components/paragraphTitle/paragraphTitle";
 import { CategoriasList } from "@/src/components/categoriasList/categoriasList";
+import { InputSearch } from "@/src/components/inputSearch/inputSearch";
 import { ItemHome } from "@/src/components/itemHome/itemHome";
+import { Separator } from "@/src/components/separator/separator";
+import { HomeStackRoutesNavigatorPrivateProps } from "@/src/routes/privateStackRoutes/homeStackRoutes/@types";
+import { THEME } from "@/src/theme/global";
 import { livrosProd } from "@/src/utils/objects.utils";
+import { useNavigation } from "@react-navigation/native";
+import { FlatList, TouchableOpacity, View } from "react-native";
+import { styled } from "./styled";
 
 export default function Home() {
   const navigator = useNavigation<HomeStackRoutesNavigatorPrivateProps>();
@@ -41,6 +32,8 @@ export default function Home() {
         keyExtractor={(item) => String(item.id)}
         numColumns={3}
         horizontal={false}
+        bounces={false}
+        overScrollMode="never"
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{
           justifyContent: "space-between",
