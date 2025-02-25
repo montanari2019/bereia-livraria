@@ -19,11 +19,6 @@ export default function LoginHome() {
 
   return (
     <>
-      <StatusBar
-        backgroundColor={THEME.COLORS.GRAY_600}
-        barStyle={"light-content"}
-        translucent={true}
-      />
       <View style={styled.container}>
         <HeaderPublic />
 
