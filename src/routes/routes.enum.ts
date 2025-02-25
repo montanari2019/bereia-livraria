@@ -6,6 +6,7 @@ export enum ROUTES_STACK_ENUM {
   PROFILE_STACK_PRIVATE = "profileStack",
   MINHAS_COMPRAS_STACK_PRIVATE = "minhasComprasStack",
   HOME_STACK_PRIVATE = "homeStack",
+  SEARCH_STACK_PRIVATE = "searchStack",
   ITEM_STACK_PRIVATE = "itemStack",
   CARRINHO_STACK_PRIVATE = "carrinhoStack",
   PAYMENT_STACK_PRIVATE = "paymentStack",

@@ -229,6 +229,25 @@ Por conta disso, Alina é enviada ao Palácio para ser treinada como parte de um
   },
 ];
 
+export const recentSearch = [
+  { id: "550e8400-e29b-41d4-a716-446655440000", nome: "O Código Da Vinci" },
+  { id: "6a1d5bcd-2d7a-4b85-9241-d7e6f306cc37", nome: "1984" },
+  { id: "89c9f9f7-02cd-4f24-9df0-256db40e9785", nome: "O Senhor dos Anéis" },
+  { id: "3f9c4c42-4e1e-48d6-b17a-6571efb527cf", nome: "Dom Casmurro" },
+  { id: "21dba9f8-94a1-44e2-89f3-42a4e9e30364", nome: "O Pequeno Príncipe" },
+  {
+    id: "e674abf9-29e5-4f90-85bc-b52e7112c80b",
+    nome: "A Revolução dos Bichos",
+  },
+  { id: "47f061b3-5d1f-46c7-9cd6-bf62c6b65423", nome: "Crime e Castigo" },
+  { id: "0a5f4d3a-6031-4f25-9b3b-f07c89a33e3f", nome: "Cem Anos de Solidão" },
+  {
+    id: "cd14a259-2831-47ad-9029-05c118eefb57",
+    nome: "O Apanhador no Campo de Centeio",
+  },
+  { id: "5b4f3c22-9b63-4d7b-b5a5-58e2c6c88ea1", nome: "Orgulho e Preconceito" },
+];
+
 export const livrosMap = livrosProd.reduce((map, livro) => {
   map.set(livro.id, livro);
   return map;

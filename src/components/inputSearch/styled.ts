@@ -19,6 +19,6 @@ export const styled = StyleSheet.create({
 
   inputSearch: {
     fontFamily: THEME.FONT_FAMILY.FONT_POPPINS_400,
-    color: THEME.COLORS.GRAY_500,
+    color: THEME.COLORS.GRAY_300,
   },
 });
