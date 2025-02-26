@@ -6,6 +6,7 @@ import { THEME } from "@/src/theme/global";
 
 export function InputComponent({
   errorMessage,
+  borderColor = THEME.COLORS.BEREIA_YELLOW,
   ...resto
 }: InputComponentProps) {
   const [focusInput, setFocusInput] = useState(false);

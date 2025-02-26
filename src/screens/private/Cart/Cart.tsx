@@ -8,8 +8,17 @@ import { livrosProd } from "@/src/utils/objects.utils";
 import { formatarParaReais } from "@/src/utils/formate.ultis";
 import { CartItem } from "@/src/components/cartItem/CartItem";
 import { ButtonComponent } from "@/src/components/buttomComponent/buttonComponent";
+import { CartStackRoutesNavigatorPrivateProps } from "@/src/routes/privateStackRoutes/cartStackRoutes/@types";
+import { useNavigation } from "@react-navigation/native";
 
 export default function Cart() {
+  const navigator = useNavigation<CartStackRoutesNavigatorPrivateProps>();
+
+  function handleNavigationPayment() {
+    navigator.navigate("paymentStack");
+    // Add your navigation logic here
+  }
+
   const arrayItemNumber = Array.from({ length: 5 }, () => {
     return {
       id: Math.random().toString(36),
@@ -18,6 +27,8 @@ export default function Cart() {
       price: livrosProd[0].preco,
     };
   });
+  0;
+
   return (
     <View style={styled.container}>
       <View style={styled.header}>
@@ -63,8 +74,9 @@ export default function Cart() {
         <Text style={styled.totalText}>Total: {formatarParaReais(159.9)}</Text>
 
         <ButtonComponent
+          onPress={handleNavigationPayment}
           bgColor={THEME.COLORS.BEREIA_YELLOW}
-          title="Fazer Checkout"
+          title="Ir Para o Pagamento"
         />
       </View>
     </View>
