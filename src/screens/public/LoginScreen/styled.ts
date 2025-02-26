@@ -53,6 +53,7 @@ export const styled = StyleSheet.create({
   },
 
   buttonDisplay: {
+    width: "auto",
     flex: 1,
     display: "flex",
     alignItems: "center",

@@ -11,6 +11,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { PanGestureHandlerGoBack } from "@/src/components/panGestureHandleGoBack/panGestureHandleGoBack";
 import { Footer } from "@/src/components/footer/footer";
 import { ROUTES_STACK_ENUM } from "@/src/routes/routes.enum";
+import { ButtonComponent } from "@/src/components/buttomComponent/buttonComponent";
+import { THEME } from "@/src/theme/global";
 
 export default function SingIn() {
   const navigator = useNavigation<StackRoutesNavigatorPublicProps>();
@@ -87,12 +89,11 @@ export default function SingIn() {
               </Text>
             </TouchableOpacity>
 
-            <TouchableOpacity
-              style={styled.buttonLogin}
-              // onPress={handleNavigateSingIn}
-            >
-              <Text style={styled.textButton}>Login</Text>
-            </TouchableOpacity>
+            <ButtonComponent
+              onPress={handleSubmit(handleSingInComponent)}
+              bgColor={THEME.COLORS.BEREIA_YELLOW}
+              title="Login"
+            />
           </View>
           <Footer />
         </View>

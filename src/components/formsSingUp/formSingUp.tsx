@@ -9,6 +9,8 @@ import {
 } from "./models/singUpSchema.model";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { formatarCPF, formatarTelefone } from "@/src/utils/mascara.utils";
+import { ButtonComponent } from "../buttomComponent/buttonComponent";
+import { THEME } from "@/src/theme/global";
 
 export function FormsSingUp() {
   const {
@@ -131,12 +133,11 @@ export function FormsSingUp() {
           )}
         />
 
-        <TouchableOpacity
-          style={styled.buttonCreateAcount}
+        <ButtonComponent
           onPress={handleSubmit(handleSubmitForm)}
-        >
-          <Text style={styled.textButtonCreateAcount}>Criar Conta</Text>
-        </TouchableOpacity>
+          bgColor={THEME.COLORS.BEREIA_YELLOW}
+          title="Criar Conta"
+        />
 
         <Footer />
       </View>

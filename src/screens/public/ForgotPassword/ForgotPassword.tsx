@@ -13,6 +13,8 @@ import { Controller, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { ForgotFormData, ForgotSchema } from "./models/forgotSchema.model";
 import { ROUTES_STACK_ENUM } from "@/src/routes/routes.enum";
+import { ButtonComponent } from "@/src/components/buttomComponent/buttonComponent";
+import { THEME } from "@/src/theme/global";
 
 export default function ForgotPassword() {
   const navigator = useNavigation<StackRoutesNavigatorPublicProps>();
@@ -79,12 +81,12 @@ export default function ForgotPassword() {
                   )}
                 />
 
-                <TouchableOpacity
+                <ButtonComponent
+                  bgColor={THEME.COLORS.BEREIA_YELLOW}
                   style={styled.buttonReset}
+                  title="Resetar Senha"
                   onPress={handleSubmit(handleSubmitForm)}
-                >
-                  <Text style={styled.textButton}>Resetar Senha</Text>
-                </TouchableOpacity>
+                />
               </View>
             ) : (
               <View style={styled.containerBody}>
@@ -93,12 +95,12 @@ export default function ForgotPassword() {
                   sua senha.
                 </Text>
 
-                <TouchableOpacity
+                <ButtonComponent
+                  bgColor={THEME.COLORS.BEREIA_YELLOW}
                   style={styled.buttonReset}
+                  title="Voltar ao login"
                   onPress={handleNavigateSingIn}
-                >
-                  <Text style={styled.textButton}>Voltar ao login</Text>
-                </TouchableOpacity>
+                />
               </View>
             )}
           </ShimmerLoading>

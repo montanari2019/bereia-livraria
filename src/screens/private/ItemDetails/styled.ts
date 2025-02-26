@@ -43,6 +43,7 @@ export const styled = StyleSheet.create({
     padding: THEME.SIZES.SIZE_MARGIN_HORIZONTA_24,
     borderTopLeftRadius: 50,
     borderTopRightRadius: 50,
+    width: "100%",
   },
 
   textTitleDisplay: {

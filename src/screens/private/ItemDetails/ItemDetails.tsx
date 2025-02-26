@@ -15,6 +15,7 @@ import { THEME } from "@/src/theme/global";
 import { styled } from "./styled";
 import { ScrollView } from "react-native-gesture-handler";
 import { formatarParaReais, formatarTexto } from "@/src/utils/formate.ultis";
+import { ButtonComponent } from "@/src/components/buttomComponent/buttonComponent";
 
 export default function ItemDetails() {
   const navigator = useNavigation<HomeStackRoutesNavigatorPrivateProps>();
@@ -80,11 +81,10 @@ export default function ItemDetails() {
                   {formatarTexto(produtoState.sinopse)}
                 </Text>
 
-                <TouchableOpacity style={styled.botaoComprar}>
-                  <Text style={styled.botaoComprarTexto}>
-                    Adicionar ao Carrinho
-                  </Text>
-                </TouchableOpacity>
+                <ButtonComponent
+                  bgColor={THEME.COLORS.BEREIA_YELLOW}
+                  title="Adicionar ao Carrinho"
+                />
               </View>
             </>
           )}

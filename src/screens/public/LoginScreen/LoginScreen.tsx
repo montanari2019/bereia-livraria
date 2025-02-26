@@ -5,6 +5,7 @@ import { useNavigation } from "@react-navigation/native";
 import { StatusBar, Text, TouchableOpacity, View } from "react-native";
 import { styled } from "./styled";
 import { Footer } from "@/src/components/footer/footer";
+import { ButtonComponent } from "@/src/components/buttomComponent/buttonComponent";
 
 export default function LoginHome() {
   const navigator = useNavigation<StackRoutesNavigatorPublicProps>();
@@ -23,19 +24,17 @@ export default function LoginHome() {
         <HeaderPublic />
 
         <View style={styled.buttonDisplay}>
-          <TouchableOpacity
-            style={styled.buttonLogin}
+          <ButtonComponent
             onPress={handleNavigateSingIn}
-          >
-            <Text style={styled.textButton}>Login</Text>
-          </TouchableOpacity>
+            bgColor={THEME.COLORS.BEREIA_YELLOW}
+            title="Login"
+          />
 
-          <TouchableOpacity
-            style={styled.buttonCreatAcount}
+          <ButtonComponent
             onPress={handleNavigateSingUp}
-          >
-            <Text style={styled.textButton}>Criar Conta</Text>
-          </TouchableOpacity>
+            bgColor={THEME.COLORS.BEREIA_BRONW}
+            title="Criar Conta"
+          />
         </View>
 
         <Footer />
