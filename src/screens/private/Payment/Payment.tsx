@@ -1,21 +1,51 @@
-import { PanGestureHandlerGoBack } from "@/src/components/panGestureHandleGoBack/panGestureHandleGoBack";
-import { ROUTES_STACK_ENUM } from "@/src/routes/routes.enum";
-import { Text, View } from "react-native";
-import { styled } from "./styled";
-import QRCode from "react-native-qrcode-svg";
-import { InputComponent } from "@/src/components/inputComponent/inputComponents";
 import { ButtonComponent } from "@/src/components/buttomComponent/buttonComponent";
+import { InputComponent } from "@/src/components/inputComponent/inputComponents";
+import { AuthBottomNavigatorRoutesPrivadeProps } from "@/src/routes/bottomTabsRoutes/@types";
 import { THEME } from "@/src/theme/global";
+import { useNavigation } from "@react-navigation/native";
+import { Alert, Text, View } from "react-native";
+import QRCode from "react-native-qrcode-svg";
+import { styled } from "./styled";
+import { CartStackRoutesNavigatorPrivateProps } from "@/src/routes/privateStackRoutes/cartStackRoutes/@types";
+import { useFocusEffect } from "expo-router";
 
 export default function Payment() {
-  const pix = {
-    version: "01",
-    key: "seu@email.com", // Pode ser CPF, CNPJ, telefone ou e-mail
-    name: "Seu Nome", // Nome do recebedor
-    city: "Cidade", // Cidade do recebedor
-    transactionId: "123456", // Código da transação (opcional)
-    amount: 10.5, // Valor opcional
-  };
+  const navigatorBottom =
+    useNavigation<AuthBottomNavigatorRoutesPrivadeProps>();
+  const navigatorStackCart =
+    useNavigation<CartStackRoutesNavigatorPrivateProps>();
+
+  useFocusEffect(() => {
+    setTimeout(() => {
+      navigatorStackCart.navigate("paymentSucess");
+    }, 5000);
+  });
+
+  function alertCancelarVenda() {
+    Alert.alert("Cancelar Compra", "Você quer mesmo cancelar sua compra?", [
+      {
+        text: "Não",
+        onPress: () => console.log("Cancelamento cancelado."),
+        style: "cancel",
+      },
+      {
+        text: "Sim",
+        onPress: () => {
+          handleGoBackToHome();
+          // Adicione o código para cancelar a compra aqui
+        },
+      },
+    ]);
+  }
+
+  function handleGoBackToHome() {
+    navigatorBottom.navigate("home");
+    navigatorStackCart.reset({
+      index: 0,
+      routes: [{ name: "carrinhoStack" }],
+    });
+  }
+
   return (
     <View style={styled.container}>
       <Text style={styled.textHeader}>
@@ -23,7 +53,7 @@ export default function Payment() {
       </Text>
 
       <View style={styled.containerQrCode}>
-        <QRCode value={pix.key} size={208} />
+        <QRCode value={"montanarisoft.com"} size={208} />
       </View>
 
       <View style={styled.containerInput}>
@@ -45,6 +75,7 @@ export default function Payment() {
 
       <View>
         <ButtonComponent
+          onPress={alertCancelarVenda}
           bgColor={THEME.COLORS.DANGER_500}
           title="Cancelar Compra"
         />

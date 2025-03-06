@@ -1,10 +1,8 @@
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { HomeStackRoutesTypeProps } from "./@types";
 import Home from "@/src/screens/private/Home/Home";
 import ItemDetails from "@/src/screens/private/ItemDetails/ItemDetails";
-import { StatusBar } from "react-native";
-import { THEME } from "@/src/theme/global";
 import Search from "@/src/screens/private/Search/Search";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { HomeStackRoutesTypeProps } from "./@types";
 
 const { Navigator, Screen } =
   createNativeStackNavigator<HomeStackRoutesTypeProps>();

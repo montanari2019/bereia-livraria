@@ -6,6 +6,8 @@ import HomeStackRoutePrivate from "../privateStackRoutes/homeStackRoutes/homeSta
 import ProfileStackRoutePrivate from "../privateStackRoutes/profileStackRoutes/profileStackRoutes";
 import { AuthRoutesBottomTabProps } from "./@types";
 import { StatusBar } from "react-native";
+import { useNavigation } from "@react-navigation/native";
+import { HomeStackRoutesNavigatorPrivateProps } from "../privateStackRoutes/homeStackRoutes/@types";
 
 export default function BottomTabNavigationRoute() {
   const iconSize = THEME.SIZES.SIZE_LG_24;
