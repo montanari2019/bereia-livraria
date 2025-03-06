@@ -1,16 +1,16 @@
-import { ScrollView, Text, TouchableOpacity, View } from "react-native";
-import { InputComponent } from "../inputComponent/inputComponents";
-import { styled } from "./styled";
-import { Footer } from "../footer/footer";
+import { THEME } from "@/src/theme/global";
+import { formatarCPF, formatarTelefone } from "@/src/utils/mascara.utils";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { Controller, useForm } from "react-hook-form";
+import { ScrollView, View } from "react-native";
+import { ButtonComponent } from "../buttomComponent/buttonComponent";
+import { Footer } from "../footer/footer";
+import { InputComponent } from "../inputComponent/inputComponents";
 import {
   CreateAcountFormData,
   CreateAcountSchema,
 } from "./models/singUpSchema.model";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { formatarCPF, formatarTelefone } from "@/src/utils/mascara.utils";
-import { ButtonComponent } from "../buttomComponent/buttonComponent";
-import { THEME } from "@/src/theme/global";
+import { styled } from "./styled";
 
 export function FormsSingUp() {
   const {

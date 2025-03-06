@@ -10,6 +10,7 @@ export const styled = StyleSheet.create({
     borderBottomRightRadius: 30,
     borderBottomLeftRadius: 30,
     flexDirection: "row",
+    height: 100,
     gap: THEME.SIZES.SIZE_XSS_14,
   },
 
