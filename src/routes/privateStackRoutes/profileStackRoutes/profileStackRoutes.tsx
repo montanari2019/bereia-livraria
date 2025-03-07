@@ -4,6 +4,7 @@ import Profile from "@/src/screens/private/Profile/Profile";
 import MinhasCompras from "@/src/screens/private/MinhasCompras/MinhasCompras";
 import { MinhasAssinaturas } from "@/src/screens/private/MinhasAssinaturas/MinhasAssinaturas";
 import { MeusEnderecos } from "@/src/screens/private/MeusEnderecos/MeusEnderecos";
+import { ProfileDetails } from "@/src/screens/private/ProfileDetails/ProfileDetails";
 
 const { Navigator, Screen } =
   createNativeStackNavigator<ProfileStackRoutesTypeProps>();
@@ -15,6 +16,7 @@ export default function ProfileStackRoutePrivate() {
       <Screen name="minhasComprasStack" component={MinhasCompras} />
       <Screen name="minhasAssinaturasStack" component={MinhasAssinaturas} />
       <Screen name="meusEnderecosStack" component={MeusEnderecos} />
+      <Screen name="meuPerfilStack" component={ProfileDetails} />
     </Navigator>
   );
 }

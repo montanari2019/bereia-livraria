@@ -5,6 +5,7 @@ export type ProfileStackRoutesTypeProps = {
   minhasComprasStack: undefined;
   minhasAssinaturasStack: undefined;
   meusEnderecosStack: undefined;
+  meuPerfilStack: undefined;
   //   item: {id:string};
 };
 
