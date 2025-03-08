@@ -1,20 +1,25 @@
 import { Image, Text, TouchableOpacity, View } from "react-native";
 import { FlatList } from "react-native-gesture-handler";
 
-import ImageLivroCategory from "@/src/assets/images/sobra_e_ossos.jpg";
-import { styled } from "./styled";
-import { useState } from "react";
-import { ParagraphComponent } from "../paragraphTitle/paragraphTitle";
-import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 import { THEME } from "@/src/theme/global";
 import { categoriasComUrl } from "@/src/utils/objects.utils";
+import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
+import { useState } from "react";
+import { ParagraphComponent } from "../paragraphTitle/paragraphTitle";
+import { styled } from "./styled";
 
 export function CategoriasList() {
   const [selectItem, setSelected] = useState<string | null>();
   return (
     <View style={styled.contianerCategoria}>
       <View style={styled.containerButtonAndParagraph}>
-        <ParagraphComponent title="Categorias" />
+        <ParagraphComponent
+          title="Categorias"
+          style={{
+            fontFamily: THEME.FONT_FAMILY.FONT_POPPINS_400,
+            color: THEME.COLORS.GRAY_300,
+          }}
+        />
         <TouchableOpacity
           style={selectItem ? { display: "flex" } : { display: "none" }}
           onPress={() => setSelected(null)}
