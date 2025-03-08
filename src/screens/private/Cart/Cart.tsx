@@ -10,6 +10,7 @@ import { CartItem } from "@/src/components/cartItem/CartItem";
 import { ButtonComponent } from "@/src/components/buttomComponent/buttonComponent";
 import { CartStackRoutesNavigatorPrivateProps } from "@/src/routes/privateStackRoutes/cartStackRoutes/@types";
 import { useNavigation } from "@react-navigation/native";
+import { PickerComponent } from "@/src/components/pickerComponent/PickerComponent";
 
 export default function Cart() {
   const navigator = useNavigation<CartStackRoutesNavigatorPrivateProps>();
@@ -34,7 +35,9 @@ export default function Cart() {
       <View style={styled.header}>
         <Text style={styled.enderecoHeaderText}>Endereço de entrega:</Text>
 
-        <View style={styled.enderecoHeaderContainer}>
+        <PickerComponent />
+
+        {/* <View style={styled.enderecoHeaderContainer}>
           <MaterialIcons
             name="location-on"
             size={24}
@@ -46,7 +49,7 @@ export default function Cart() {
           <TouchableOpacity>
             <AntDesign name="right" size={24} color={THEME.COLORS.GRAY_300} />
           </TouchableOpacity>
-        </View>
+        </View> */}
       </View>
       <Separator />
 

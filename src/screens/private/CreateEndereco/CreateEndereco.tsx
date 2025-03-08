@@ -1,10 +1,9 @@
-import { ButtonComponent } from "@/src/components/buttomComponent/buttonComponent";
+import { FormsCreateEndereco } from "@/src/components/formsCreateEndereco/formCreateEndereco";
 import { HeaderProfilePages } from "@/src/components/headerProfilePages/headerProfilePages";
+import { ParagraphComponent } from "@/src/components/paragraphTitle/paragraphTitle";
 import { THEME } from "@/src/theme/global";
 import { ScrollView, View } from "react-native";
 import { styled } from "./styled";
-import { FormsCreateEndereco } from "@/src/components/formsCreateEndereco/formCreateEndereco";
-import { ParagraphComponent } from "@/src/components/paragraphTitle/paragraphTitle";
 
 export default function CreateEndereco() {
   return (
