@@ -11,6 +11,7 @@ export const styled = StyleSheet.create({
   formsContainer: {
     marginHorizontal: THEME.SIZES.SIZE_LG_24,
     marginVertical: THEME.SIZES.SIZE_SM_18,
+    gap: THEME.SIZES.SIZE_XXXS_12,
   },
 
   buttonForgoutPassword: {

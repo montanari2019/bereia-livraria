@@ -5,23 +5,26 @@ export const styled = StyleSheet.create({
   container: {
     width: "100%",
     justifyContent: "space-between",
-
-    flex: 1,
+    borderWidth: 1,
+    borderRadius: THEME.SIZES.SIZE_RADIUS_15,
+    borderColor: THEME.COLORS.GRAY_100,
+    padding: THEME.SIZES.SIZE_MARGIN_HORIZONTA_24,
   },
 
   contaierDisplay: {
-    flexDirection: "row",
     justifyContent: "space-between",
+    flexDirection: "row",
     gap: THEME.SIZES.SIZE_XXXS_12,
   },
 
   contaierDisplayText: {
     gap: 8,
+    width: "70%",
   },
 
   contaierDisplayButton: {
-    flexDirection: "row",
-    justifyContent: "space-between",
+    // flexDirection: "",
+    justifyContent: "flex-end",
     alignItems: "flex-end",
     gap: 5,
   },
@@ -29,7 +32,7 @@ export const styled = StyleSheet.create({
   button: {
     width: 45,
     height: 45,
-    borderRadius: THEME.SIZES.SIZE_RADIUS_15,
+    borderRadius: 10,
     alignItems: "center",
     justifyContent: "center",
   },

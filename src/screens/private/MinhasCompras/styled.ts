@@ -4,7 +4,7 @@ import { StyleSheet } from "react-native";
 export const styled = StyleSheet.create({
   sectionContainer: {
     flex: 1,
-    padding: THEME.SIZES.SIZE_MARGIN_HORIZONTA_24,
+
     gap: THEME.SIZES.SIZE_XSS_14,
   },
 

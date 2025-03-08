@@ -6,6 +6,8 @@ export type ProfileStackRoutesTypeProps = {
   minhasAssinaturasStack: undefined;
   meusEnderecosStack: undefined;
   meuPerfilStack: undefined;
+  alterarEnderecoStack: undefined;
+  cadastrarEnderecoStack: undefined;
   //   item: {id:string};
 };
 

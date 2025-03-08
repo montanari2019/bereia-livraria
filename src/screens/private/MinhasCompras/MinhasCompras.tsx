@@ -40,7 +40,7 @@ export default function MinhasCompras() {
           keyExtractor={(item) => item.id}
           contentContainerStyle={{
             gap: THEME.SIZES.SIZE_XS_16,
-            paddingBottom: 25,
+            padding: THEME.SIZES.SIZE_MARGIN_HORIZONTA_24,
           }}
           renderItem={({ item }) => (
             <View style={styled.cardContainer}>

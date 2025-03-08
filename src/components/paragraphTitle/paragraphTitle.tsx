@@ -1,26 +1,17 @@
-import { THEME } from "@/src/theme/global";
-import { Text, TextStyle } from "react-native";
+import { Text, TextProps, TextStyle } from "react-native";
 
-interface PragraphTitleProps extends TextStyle {
+interface PragraphTitleProps extends TextProps {
   title: string;
+  style?: TextStyle;
 }
 
 export function ParagraphComponent({
   title,
-  color = THEME.COLORS.GRAY_500,
-  fontSize = THEME.SIZES.SIZE_SM_18,
-  fontFamily = THEME.FONT_FAMILY.FONT_POPPINS_700,
+  style,
   ...resto
 }: PragraphTitleProps) {
   return (
-    <Text
-      style={{
-        fontFamily,
-        color,
-        fontSize,
-        ...resto,
-      }}
-    >
+    <Text style={{ ...style }} {...resto}>
       {title}
     </Text>
   );

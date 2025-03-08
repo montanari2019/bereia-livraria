@@ -1,3 +1,5 @@
+import { CardEnderecoProps } from "../components/cardEndereco/interface/cardEndereco.interface";
+
 export const livrosProd = [
   {
     id: Math.random().toString(),
@@ -275,3 +277,56 @@ interface PropsLivros {
   preco: number;
   img: string;
 }
+
+export const enderecosStatic: CardEnderecoProps[] = [
+  {
+    id: "a1b2c3d4-e5f6-7890-gh12-ijklmnop3456",
+    title: "Residência Principal",
+    endereco: "Rua das Flores",
+    numero: "123",
+    cep: "01010-000",
+    cidade_uf: "São Paulo - SP",
+    complemento: "Apartamento 45",
+    endereco_principal: true,
+  },
+  {
+    id: "b2c3d4e5-f678-9012-gh34-ijklmnop5678",
+    title: "Escritório",
+    endereco: "Avenida Brasil",
+    numero: "456",
+    cep: "02020-111",
+    cidade_uf: "Rio de Janeiro - RJ",
+    complemento: "Bloco B, Sala 203",
+    endereco_principal: false,
+  },
+  {
+    id: "c3d4e5f6-7890-1234-gh56-ijklmnop7890",
+    title: "Casa de Praia",
+    endereco: "Rua dos Pinheiros",
+    numero: "789",
+    cep: "03030-222",
+    cidade_uf: "Belo Horizonte - MG",
+    complemento: "Casa Fundos",
+    endereco_principal: false,
+  },
+  {
+    id: "d4e5f678-9012-3456-gh78-ijklmnop9012",
+    title: "Casa dos Pais",
+    endereco: "Travessa das Palmeiras",
+    numero: "321",
+    cep: "04040-333",
+    cidade_uf: "Curitiba - PR",
+    complemento: "Próximo ao mercado",
+    endereco_principal: false,
+  },
+  {
+    id: "e5f67890-1234-5678-gh90-ijklmnop1234",
+    title: "Apartamento de Férias",
+    endereco: "Alameda dos Girassóis",
+    numero: "654",
+    cep: "05050-444",
+    cidade_uf: "Salvador - BA",
+    complemento: "Cobertura 101",
+    endereco_principal: true,
+  },
+];
