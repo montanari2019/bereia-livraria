@@ -75,9 +75,4 @@ export const styled = StyleSheet.create({
     alignItems: "flex-start",
     gap: THEME.SIZES.SIZE_XXXS_12,
   },
-
-  displayFlatList: {
-    flex: 1,
-    paddingBottom: THEME.SIZES.SIZE_MARGIN_HORIZONTA_24,
-  },
 });
