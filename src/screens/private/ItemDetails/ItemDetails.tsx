@@ -16,13 +16,16 @@ import { styled } from "./styled";
 import { ScrollView } from "react-native-gesture-handler";
 import { formatarParaReais, formatarTexto } from "@/src/utils/formate.ultis";
 import { ButtonComponent } from "@/src/components/buttomComponent/buttonComponent";
+import useCartContext from "@/src/context/cartContext/useCartContext";
+import imageDefault from "@/src/assets/images/logo-bereia.png";
 
 export default function ItemDetails() {
   const navigator = useNavigation<HomeStackRoutesNavigatorPrivateProps>();
   const route = useRoute();
   const { id } = route.params as RoutesParamsProps;
+  const { addItemCart } = useCartContext();
 
-  const [produtoState, setProdutoState] = useState<ProdutoProps | null>();
+  const [produtoState, setProdutoState] = useState<ProdutoProps>();
 
   function handleGoBack() {
     navigator.goBack();
@@ -31,8 +34,6 @@ export default function ItemDetails() {
     const produto = livrosMap.get(id);
     if (produto) {
       setProdutoState(produto);
-    } else {
-      setProdutoState(null);
     }
   });
 
@@ -82,6 +83,7 @@ export default function ItemDetails() {
                 </Text>
 
                 <ButtonComponent
+                  onPress={() => addItemCart(produtoState)}
                   bgColor={THEME.COLORS.BEREIA_YELLOW}
                   title="Adicionar ao Carrinho"
                 />

@@ -11,24 +11,18 @@ import { ButtonComponent } from "@/src/components/buttomComponent/buttonComponen
 import { CartStackRoutesNavigatorPrivateProps } from "@/src/routes/privateStackRoutes/cartStackRoutes/@types";
 import { useNavigation } from "@react-navigation/native";
 import { PickerComponent } from "@/src/components/pickerComponent/PickerComponent";
+import useCartContext from "@/src/context/cartContext/useCartContext";
+import { NotFoundComponent } from "@/src/components/notFoud/NotFoud";
 
 export default function Cart() {
   const navigator = useNavigation<CartStackRoutesNavigatorPrivateProps>();
+
+  const { cartItens, totalizerCart } = useCartContext();
 
   function handleNavigationPayment() {
     navigator.navigate("paymentStack");
     // Add your navigation logic here
   }
-
-  const arrayItemNumber = Array.from({ length: 5 }, () => {
-    return {
-      id: Math.random().toString(36),
-      title: livrosProd[0].titulo,
-      image: livrosProd[0].img,
-      price: livrosProd[0].preco,
-    };
-  });
-  0;
 
   return (
     <View style={styled.container}>
@@ -56,8 +50,9 @@ export default function Cart() {
       <FlatList
         bounces={false}
         overScrollMode="never"
-        data={arrayItemNumber}
+        data={cartItens}
         keyExtractor={(item) => item.id}
+        ListEmptyComponent={<NotFoundComponent />}
         contentContainerStyle={{
           gap: THEME.SIZES.SIZE_XS_16,
           padding: THEME.SIZES.SIZE_MARGIN_HORIZONTA_24,
@@ -66,17 +61,20 @@ export default function Cart() {
           <CartItem
             key={item.id}
             id={item.id}
-            imageUrl={item.image}
-            price={item.price}
-            title={item.title}
+            imageUrl={item.img}
+            price={item.preco}
+            title={item.titulo}
           />
         )}
       />
 
       <View style={styled.totalizerContainer}>
-        <Text style={styled.totalText}>Total: {formatarParaReais(159.9)}</Text>
+        <Text style={styled.totalText}>
+          Total: {formatarParaReais(totalizerCart())}
+        </Text>
 
         <ButtonComponent
+          disabled={totalizerCart() === 0}
           onPress={handleNavigationPayment}
           bgColor={THEME.COLORS.BEREIA_YELLOW}
           title="Ir Para o Pagamento"
