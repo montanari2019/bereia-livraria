@@ -10,4 +10,5 @@ export interface CartContextProps {
   removeItemCart: (id: string) => void;
   cartItens: LivrosProps[];
   totalizerCart: () => number;
+  cleanCartItems: () => void;
 }

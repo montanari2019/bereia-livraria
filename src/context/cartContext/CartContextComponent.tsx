@@ -51,6 +51,10 @@ export default function CartContextComponent({ children }: ContextProps) {
     await SaveCartItensStorage(cartItens);
   }
 
+  async function cleanCartItems() {
+    setCartItens([]);
+  }
+
   useEffect(() => {
     handleShoppingCartChanges();
   }, [cartItens]);
@@ -61,7 +65,13 @@ export default function CartContextComponent({ children }: ContextProps) {
 
   return (
     <CartContext.Provider
-      value={{ removeItemCart, addItemCart, cartItens, totalizerCart }}
+      value={{
+        removeItemCart,
+        addItemCart,
+        cartItens,
+        totalizerCart,
+        cleanCartItems,
+      }}
     >
       {children}
     </CartContext.Provider>
