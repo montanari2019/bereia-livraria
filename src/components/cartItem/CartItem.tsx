@@ -4,8 +4,10 @@ import AntDesign from "@expo/vector-icons/AntDesign";
 import { Alert, Image, Text, TouchableOpacity, View } from "react-native";
 import { CartItemProps } from "./interface/interface";
 import { styled } from "./styled";
+import useCartContext from "@/src/context/cartContext/useCartContext";
 
 export function CartItem({ imageUrl, price, title, id }: CartItemProps) {
+  const { removeItemCart } = useCartContext();
   function deleteItemCart(id: string) {
     Alert.alert(
       "Confirmação",
@@ -18,10 +20,10 @@ export function CartItem({ imageUrl, price, title, id }: CartItemProps) {
         },
         {
           text: "Sim",
-          onPress: () => console.log("Item excluído!"),
+          onPress: () => removeItemCart(id),
         },
       ],
-      { cancelable: false } // Não permite cancelar a confirmação
+      { cancelable: false }
     );
   }
   return (
