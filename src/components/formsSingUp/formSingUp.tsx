@@ -1,14 +1,16 @@
-import { ScrollView, Text, TouchableOpacity, View } from "react-native";
-import { InputComponent } from "../inputComponent/inputComponents";
-import { styled } from "./styled";
-import { Footer } from "../footer/footer";
+import { THEME } from "@/src/theme/global";
+import { formatarCPF, formatarTelefone } from "@/src/utils/mascara.utils";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { Controller, useForm } from "react-hook-form";
+import { ScrollView, View } from "react-native";
+import { ButtonComponent } from "../buttomComponent/buttonComponent";
+import { Footer } from "../footer/footer";
+import { InputComponent } from "../inputComponent/inputComponents";
 import {
   CreateAcountFormData,
   CreateAcountSchema,
 } from "./models/singUpSchema.model";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { formatarCPF, formatarTelefone } from "@/src/utils/mascara.utils";
+import { styled } from "./styled";
 
 export function FormsSingUp() {
   const {
@@ -131,12 +133,11 @@ export function FormsSingUp() {
           )}
         />
 
-        <TouchableOpacity
-          style={styled.buttonCreateAcount}
+        <ButtonComponent
           onPress={handleSubmit(handleSubmitForm)}
-        >
-          <Text style={styled.textButtonCreateAcount}>Criar Conta</Text>
-        </TouchableOpacity>
+          bgColor={THEME.COLORS.BEREIA_YELLOW}
+          title="Criar Conta"
+        />
 
         <Footer />
       </View>

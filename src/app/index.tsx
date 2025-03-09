@@ -6,6 +6,7 @@ import {
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { Loading } from "../components/loading/Loading";
 import { Routes } from "../routes";
+import { SafeAreaView } from "react-native";
 
 export default function Index() {
   const [fontsLoaded] = useFonts({
@@ -16,7 +17,9 @@ export default function Index() {
   return (
     <>
       <GestureHandlerRootView style={{ flex: 1 }}>
-        {fontsLoaded ? <Routes /> : <Loading textFild />}
+        <SafeAreaView style={{ flex: 1 }}>
+          {fontsLoaded ? <Routes /> : <Loading textFild />}
+        </SafeAreaView>
       </GestureHandlerRootView>
     </>
   );

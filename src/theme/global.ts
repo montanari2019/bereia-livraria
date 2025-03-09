@@ -16,6 +16,7 @@ export const THEME = {
 
     DANGER_500: "#E25858",
     DANGER_900: "#900101",
+    SUCESS_500: "#00C797",
   },
 
   SIZES: {
