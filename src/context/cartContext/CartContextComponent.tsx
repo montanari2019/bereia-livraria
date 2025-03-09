@@ -1,6 +1,10 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import { CartContextProps, ContextProps } from "./interface/@types";
 import { LivrosProps } from "./interface/produto.interface";
+import {
+  GetCartStorage,
+  GetCartStorageJsonStrign,
+} from "./storage/storage.cart";
 
 export const CartContext = createContext({} as CartContextProps);
 
@@ -28,6 +32,27 @@ export default function CartContextComponent({ children }: ContextProps) {
       return totalizer;
     }, 0);
   }
+
+  async function GetStorageItens() {
+    const cartStorage = await GetCartStorage();
+
+    setCartItens(cartStorage);
+  }
+
+  async function handleShoppingCartChanges() {
+    const itemsStorageJson = await GetCartStorageJsonStrign();
+    const stateLocalJson = JSON.stringify(cartItens);
+
+    if (stateLocalJson === itemsStorageJson) {
+      return;
+    }
+
+    // Criar a implementacao de subir as mudancas para o localstorage do telefone
+  }
+
+  useEffect(() => {
+    GetStorageItens();
+  }, []);
 
   return (
     <CartContext.Provider
