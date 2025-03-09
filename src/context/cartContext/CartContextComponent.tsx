@@ -4,6 +4,7 @@ import { LivrosProps } from "./interface/produto.interface";
 import {
   GetCartStorage,
   GetCartStorageJsonStrign,
+  SaveCartItensStorage,
 } from "./storage/storage.cart";
 
 export const CartContext = createContext({} as CartContextProps);
@@ -47,8 +48,12 @@ export default function CartContextComponent({ children }: ContextProps) {
       return;
     }
 
-    // Criar a implementacao de subir as mudancas para o localstorage do telefone
+    await SaveCartItensStorage(cartItens);
   }
+
+  useEffect(() => {
+    handleShoppingCartChanges();
+  }, [cartItens]);
 
   useEffect(() => {
     GetStorageItens();
