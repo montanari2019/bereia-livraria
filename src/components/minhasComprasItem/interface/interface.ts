@@ -1,4 +1,6 @@
 export interface MinhasComprasItemProps {
   imageUrl: string;
-  dataEntrega: string;
+  status: "Em preparação" | "Entregue" | "Devolvido";
+  dataPrevistaDevolucao: Date;
+  dataEntrega: Date;
 }

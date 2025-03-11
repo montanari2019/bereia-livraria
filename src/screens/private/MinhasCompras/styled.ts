@@ -17,7 +17,7 @@ export const styled = StyleSheet.create({
   },
 
   containerItens: {
-    gap: THEME.SIZES.SIZE_XSS_14,
+    gap: THEME.SIZES.SIZE_MARGIN_HORIZONTA_24,
   },
   totalizerText: {
     fontSize: THEME.SIZES.SIZE_XS_16,

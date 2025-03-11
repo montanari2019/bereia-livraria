@@ -12,18 +12,25 @@ import { ScrollView, Text, View } from "react-native";
 import { styled } from "./styled";
 import { FlatList } from "react-native-gesture-handler";
 import { THEME } from "@/src/theme/global";
+import { MinhasComprasItemProps } from "@/src/components/minhasComprasItem/interface/interface";
 
 export default function MinhasCompras() {
   const newArray = Array.from({ length: 3 }, () => {
     return {
       id: Math.random().toString(36),
+      image: livrosProd[2].img,
+      status: "Devolvido",
+      dataEntrega: new Date(),
+      dataPrevistaDevolucao: new Date(),
     };
   });
   const arrayItemNumber = Array.from({ length: 5 }, () => {
     return {
       id: Math.random().toString(36),
       image: livrosProd[0].img,
+      status: "Devolvido",
       dataEntrega: new Date(),
+      dataPrevistaDevolucao: new Date(),
     };
   });
   0;
@@ -53,7 +60,9 @@ export default function MinhasCompras() {
                   return (
                     <MinhasComprasItem
                       key={index.id}
-                      dataEntrega={new Date().toISOString()}
+                      dataEntrega={new Date()}
+                      dataPrevistaDevolucao={new Date()}
+                      status="Entregue"
                       imageUrl={livrosProd[1].img}
                     />
                   );

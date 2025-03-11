@@ -9,6 +9,8 @@ export const THEME = {
     GRAY_500: "#323238",
     GRAY_600: "#202024",
 
+    PURPLE_500: "#6C5AEF",
+
     BEREIA_YELLOW: "#F5A209",
     BEREIA_BRONW: "#5C4211",
 

@@ -59,7 +59,6 @@ export const styled = StyleSheet.create({
     width: 200,
     fontSize: THEME.SIZES.SIZE_SM_18,
     fontFamily: THEME.FONT_FAMILY.FONT_POPPINS_700,
-    color: THEME.COLORS.SUCESS_500,
     textTransform: "capitalize",
   },
 
