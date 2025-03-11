@@ -17,27 +17,46 @@ export function ProfileDetails() {
       <View style={styled.contianer}>
         <CardRadius height={250}>
           <View style={styled.contianerSection}>
-            <ParagraphComponent title="Dados Pessoais" />
+            <ParagraphComponent
+              style={{
+                color: THEME.COLORS.GRAY_500,
+                fontFamily: THEME.FONT_FAMILY.FONT_POPPINS_700,
+                fontSize: THEME.SIZES.SIZE_XS_16,
+              }}
+              title="Dados Pessoais"
+            />
 
             <View style={styled.bodyTextSection}>
               <ParagraphComponent
-                fontSize={THEME.SIZES.SIZE_XSS_14}
-                fontFamily={THEME.FONT_FAMILY.FONT_POPPINS_400}
+                style={{
+                  color: THEME.COLORS.GRAY_500,
+                  fontFamily: THEME.FONT_FAMILY.FONT_POPPINS_400,
+                  fontSize: THEME.SIZES.SIZE_XSS_14,
+                }}
                 title={`Nome: Ikaro Bruno da Mata Monatanari`}
               />
               <ParagraphComponent
-                fontSize={THEME.SIZES.SIZE_XSS_14}
-                fontFamily={THEME.FONT_FAMILY.FONT_POPPINS_400}
+                style={{
+                  color: THEME.COLORS.GRAY_500,
+                  fontFamily: THEME.FONT_FAMILY.FONT_POPPINS_400,
+                  fontSize: THEME.SIZES.SIZE_XSS_14,
+                }}
                 title={`Email: ikaro@gmail.com`}
               />
               <ParagraphComponent
-                fontSize={THEME.SIZES.SIZE_XSS_14}
-                fontFamily={THEME.FONT_FAMILY.FONT_POPPINS_400}
+                style={{
+                  color: THEME.COLORS.GRAY_500,
+                  fontFamily: THEME.FONT_FAMILY.FONT_POPPINS_400,
+                  fontSize: THEME.SIZES.SIZE_XSS_14,
+                }}
                 title={`Telefone: ${formatarTelefone("69993569547")}`}
               />
               <ParagraphComponent
-                fontSize={THEME.SIZES.SIZE_XSS_14}
-                fontFamily={THEME.FONT_FAMILY.FONT_POPPINS_400}
+                style={{
+                  color: THEME.COLORS.GRAY_500,
+                  fontFamily: THEME.FONT_FAMILY.FONT_POPPINS_400,
+                  fontSize: THEME.SIZES.SIZE_XSS_14,
+                }}
                 title={`CPF: ${formatarCPF("00887957218")}`}
               />
             </View>
